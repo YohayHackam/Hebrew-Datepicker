@@ -59,7 +59,7 @@ class JewishDatepicker {
         this.baseDateFormatted = this.formatDateForAPI(this.baseDate);
         this.selectedGergorianDate = this.baseDateFormatted ? this.baseDateFormatted : null;
 
-        // Store the original init date for cancel functionality - FIXED: keep null if no initDate
+        // Store the original init date for cancel functionality -  keep null if no initDate
         this.originalInitDate = this.initDate ? new Date(this.initDate) : null;
         this.originalInitDateFormatted = this.originalInitDate ? this.formatDateForAPI(this.originalInitDate) : null;
 
@@ -189,7 +189,7 @@ class JewishDatepicker {
             .catch(error => console.log('error', error));
     }
 
-    // FIXED: Method to reset to original init date or clear if no initDate
+    //  Method to reset to original init date or clear if no initDate
     resetToInitDate() {
         // If there was no original init date, clear the input and close picker
         if (!this.originalInitDate) {
