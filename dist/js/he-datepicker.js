@@ -174,7 +174,7 @@ class JewishDatepicker {
                 this.wrapper.querySelector('.jewish_datepicker_section_month').innerHTML = this.get_calendar_html(result.items, CurrentDay, this.CurrentHeMonth);
 
                 // Select the appropriate date (initDate if provided, otherwise today)
-                if (this.initDate) {
+                if (this.originalInitDate) {
                     let initDay = this.wrapper.querySelector(`[data-full="${this.baseDateFormatted}"]`);
                     if (initDay) {
                         this.select_day(initDay);
