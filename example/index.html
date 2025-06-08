@@ -127,14 +127,26 @@
 
 
     <script>
+        // Init vaia HTML elsement Or String selector
+        let selector = document.querySelector('#Birthday');
+        // 
+        //let selector = '#Birthday';
 
         window.addEventListener('load', function () {
-			const datepicker = new JewishDatepicker( '#Birthday',{
+			const datepicker = new JewishDatepicker( selector,{
 					color: '#9C27B0',
                     //hideHeader : true,
-				}
+                    // initDate :'01-02-2024',// Set initial date in the format 'MM-DD-YYYY'
+             } 				
 			);
 		});
+        // Listen to change event on Apply selected date
+        selector.addEventListener('change', function (e) {
+            console.info('Selected date: '+  e.target.value);
+        });
+        
+
+        
 		
     </script>
     
